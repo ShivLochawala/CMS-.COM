@@ -47,12 +47,12 @@ if(isset($_POST['forgot'])){
                     $mail->isSMTP();                                      // Set mailer to use SMTP
                     $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
                     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-                    $mail->Username = 'shivlocho@gmail.com';                 // SMTP username
-                    $mail->Password = 'Shiv@909981';                           // SMTP password
+                    $mail->Username = '';                 // SMTP username
+                    $mail->Password = '';                           // SMTP password
                     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
                     $mail->Port = 587;                                    // TCP port to connect to
 
-                    $mail->setFrom('shivlocho@gmail.com', 'CMS.COM');
+                    $mail->setFrom('', 'CMS.COM');
                     $mail->addAddress($user_email);     // Add a recipient
 
                     $mail->isHTML(true);                                  // Set email format to HTML
